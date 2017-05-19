@@ -2,5 +2,9 @@
 <ul>
   <li *ngFor="let todo of todoStore.todos | async">
     <p>{{ todo.text }}: {{ todo.done ? '☑' : '□'}}</p>
+    <button (click)="select(todo.id)">edit</button>
   </li>
 </ul>
+<div *ngIf="selectedTodo | async; let todo">
+  <app-todo-edit [todo]="todo" (submit)="editTodo($event)"></app-todo-edit>
+</div>

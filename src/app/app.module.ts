@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { TodoStoreService } from './todo-store.service';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FakeTodoHttpService } from './fake-todo-http.service';
+import { TodoEditComponent } from './todo-edit/todo-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoEditComponent
   ],
   imports: [
     BrowserModule,
