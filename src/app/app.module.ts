@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { TodoStoreService } from './todo-store.service';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { FakeTodoHttpService } from './fake-todo-http.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    TodoStoreService,
+    FakeTodoHttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

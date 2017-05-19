@@ -1,0 +1,6 @@
+<h2>todo list</h2>
+<ul>
+  <li *ngFor="let todo of todoStore.todos | async">
+    <p>{{ todo.text }}: {{ todo.done ? '☑' : '□'}}</p>
+  </li>
+</ul>
